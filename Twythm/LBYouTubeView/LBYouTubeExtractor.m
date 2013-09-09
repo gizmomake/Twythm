@@ -124,7 +124,7 @@ static NSString *UnescapeString(NSString *string) {
             *error = decodingError;
         }
         else {
-            NSArray* videos = [[[JSONCode objectForKey:@"content"] objectForKey:@"video"] objectForKey:@"fmt_stream_map"];
+            NSArray* videos = JSONCode[@"content"][@"player_data"][@"fmt_stream_map"];
             NSString* streamURL = nil;
             if (videos.count) {
                 NSString* streamURLKey = @"url";

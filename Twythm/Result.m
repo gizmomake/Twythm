@@ -97,9 +97,12 @@
     NSLog(@"%@",raw_title);
     NSURL *title_url = [NSURL URLWithString:raw_title];
     NSString *title = [NSString stringWithContentsOfURL:title_url
-                                              encoding:NSASCIIStringEncoding
+                                              encoding:NSUTF8StringEncoding
                                                  error:&error];
-    title_formatted = [NSString stringWithFormat: @"%@", title];
+    
+    NSString *title_replaced =[title stringByReplacingOccurrencesOfString:@"'" withString:@""];
+
+    title_formatted = [NSString stringWithFormat: @"%@", title_replaced];
 
     //ARTIST
     
@@ -107,9 +110,11 @@
     NSString *raw_artist = [NSString stringWithFormat: @"http://twythm.com/iphone/artist.php?song=%@", song];
     NSURL *artist_url = [NSURL URLWithString:raw_artist];
     NSString *artist = [NSString stringWithContentsOfURL:artist_url
-                                               encoding:NSASCIIStringEncoding
+                                               encoding:NSUTF8StringEncoding
                                                   error:&error];
-    artist_formatted = [NSString stringWithFormat: @"%@", artist];
+    NSString *artist_replaced =[artist stringByReplacingOccurrencesOfString:@"'" withString:@""];
+
+    artist_formatted = [NSString stringWithFormat: @"%@", artist_replaced];
     
     
     [Artist setText:artist_formatted];
@@ -120,6 +125,7 @@
     
     NSString *raw_watchurl_raw = [NSString stringWithFormat: @"http://twythm.com/youtubegetter.php?query=%@+%@", title_formatted, artist_formatted];
     NSString *raw_watchurl = [raw_watchurl_raw stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    NSLog(@"%@",raw_watchurl);
 
     NSURL *watch_url = [NSURL URLWithString:raw_watchurl];
     NSString *watchurl = [NSString stringWithContentsOfURL:watch_url
