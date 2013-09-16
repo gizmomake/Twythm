@@ -69,7 +69,7 @@
     [self.view addSubview:bannerView_];
     
     // Initiate a generic request to load it with an ad.
-    [bannerView_ loadRequest:[GADRequest request]];
+   [bannerView_ loadRequest:[GADRequest request]];
     
     //LINK
     NSString *raw_link = [NSString stringWithFormat: @"http://twyt.co/generate.php?query=%@", song];
