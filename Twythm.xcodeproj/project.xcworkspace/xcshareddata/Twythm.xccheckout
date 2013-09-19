@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8DA89265-CF50-4332-ACED-FD25328288A3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Twythm</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>490281FC-1AF1-4DA1-9FBC-646B563205AC</key>
+		<string>https://github.com/gizmomake/Twythm.git</string>
+		<key>9690C8C2-D7F0-4729-9487-A58D73D39988</key>
+		<string>https://github.com/gizmomake/twythm.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Twythm.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>490281FC-1AF1-4DA1-9FBC-646B563205AC</key>
+		<string>../..</string>
+		<key>9690C8C2-D7F0-4729-9487-A58D73D39988</key>
+		<string>../../../../../twythm</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gizmomake/Twythm.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>490281FC-1AF1-4DA1-9FBC-646B563205AC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9690C8C2-D7F0-4729-9487-A58D73D39988</string>
+			<key>IDESourceControlWCCName</key>
+			<string>twythm</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>490281FC-1AF1-4DA1-9FBC-646B563205AC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TwythmGit</string>
+		</dict>
+	</array>
+</dict>
+</plist>

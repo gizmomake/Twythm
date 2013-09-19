@@ -556,7 +556,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Twythm/Twythm-Prefix.pch";
 				INFOPLIST_FILE = "Twythm/Twythm-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Downloads/GoogleAdMobAdsSdkiOS-6.5.0\"",
@@ -576,7 +576,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Twythm/Twythm-Prefix.pch";
 				INFOPLIST_FILE = "Twythm/Twythm-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Downloads/GoogleAdMobAdsSdkiOS-6.5.0\"",
