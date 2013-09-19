@@ -8,8 +8,10 @@
 
 #import "About.h"
 
-@end
-@interface About ()
+
+@interface About()
+    
+
 
 @end
 
@@ -42,7 +44,6 @@
     
     NSArray *colors = [NSArray arrayWithObjects:[UIColor redColor], [UIColor greenColor], [UIColor blueColor], nil];
     NSArray *text = [NSArray arrayWithObjects:@"Welcome!",@"Using Twythm",@"Sharing", @":)", nil];
-    NSArray *images = [NSArray arrayWithObjects:@"1.png",@"2.png",@"3.png", nil];
     NSArray *bodytext = [NSArray arrayWithObjects:@"Welcome to Twythm! Twythm allows you to share the song you're listening to on Twitter and Facebook. \n \n Swipe to see how it works.",@"First, we'll learn how to navigate. To go back, swipe from the very left side of your screen. Next, we'll learn how to search for a song. Tap the search button and type in a song and an artist. You'll get a page with the song you searched for. There, you can share it and listen to it. Don't worry if it's not right, just refine your search. Finally, instead of searching for a song, you can use the one that's playing in your music app. Just tap \"Use the song I'm listening to\" \n \n Swipe right to learn more ",@"Once you have searched for a song, or used the one playing, You can share it in a Tweet, post it on Facebook, or copy the link. When you share the song, your friends will get a unique link for that song. If they visit it, they too can listen to the song, buy it on Amazon, and more. For example, let's say you typed in \"Countdown by Rush\", you'd get a link like this: http://twyt.co/gHl8rP. If you tap it, you can listen to it as well.", @"Enjoy!", nil];
 
     for (int i = 0; i < text.count; i++) {
@@ -141,6 +142,4 @@
     // Remove the mail view
     [self dismissModalViewControllerAnimated:YES];
 }
-
-
 @end

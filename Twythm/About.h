@@ -16,3 +16,4 @@
 @property (strong, nonatomic) IBOutlet UIPageControl *page;
 - (IBAction)openMail:(id)sender;
 
+@end

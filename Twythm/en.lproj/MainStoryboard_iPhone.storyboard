@@ -17,22 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nou-NL-X1u">
-                                <rect key="frame" x="0.0" y="-94" width="325" height="95"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="21"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="Use the song I'm listening to ">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="dXZ-yt-QVI" kind="push" id="SMx-a5-UEs"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap here and type a song . . ." minimumFontSize="27" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ouc-me-6hs">
                                 <rect key="frame" x="41" y="99" width="244" height="64"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,20 +38,6 @@
                                 <connections>
                                     <action selector="SendInformation:" destination="2" eventType="touchUpInside" id="uqT-mf-WDh"/>
                                     <segue destination="g84-aX-v5Q" kind="push" customClass="Segue" id="d73-21-baV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfo-PU-JkY">
-                                <rect key="frame" x="-9" y="-18" width="22" height="22"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7mx-Yo-KF2" kind="push" id="8N9-sf-ebX"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="twythm_smile.png" translatesAutoresizingMaskIntoConstraints="NO" id="s0K-2b-3q8">
@@ -100,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="365" y="243"/>
+            <point key="canvasLocation" x="420" y="128"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aXA-zm-7hm">
@@ -271,7 +241,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rj-mi-TZu">
-                                <rect key="frame" x="87" y="-2" width="61" height="85"/>
+                                <rect key="frame" x="87" y="-1.9999999999999998" width="61" height="85"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
                                 <state key="normal" title="←">
                                     <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -433,8 +403,11 @@
     </scenes>
     <resources>
         <image name="copy.png" width="128" height="128"/>
+        <image name="copy.png" width="128" height="128"/>
+        <image name="fb.png" width="104" height="104"/>
         <image name="fb.png" width="104" height="104"/>
         <image name="play.png" width="250" height="250"/>
+        <image name="twitter.png" width="128" height="128"/>
         <image name="twitter.png" width="128" height="128"/>
         <image name="twythm_smile.png" width="512" height="512"/>
     </resources>
@@ -444,7 +417,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Zj7-PU-gjD"/>
-        <segue reference="qat-qR-Mhj"/>
+        <segue reference="d73-Wa-G3x"/>
     </inferredMetricsTieBreakers>
 </document>
