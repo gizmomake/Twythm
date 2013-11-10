@@ -72,6 +72,12 @@
     
 }
 
+- (IBAction)search:(id)sender {
+    
+    Result *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"Result"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return NO;

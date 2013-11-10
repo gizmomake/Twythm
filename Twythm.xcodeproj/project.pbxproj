@@ -226,19 +226,16 @@
 		6CA5B9BA176A44C700FEE6CD /* Twythm */ = {
 			isa = PBXGroup;
 			children = (
-				6C2C2A5317A3610700FD8CB3 /* fb.png */,
-				6CED0E5917A3628A00C2B62E /* twythm_smile.png */,
-				6C2C2A5517A3612400FD8CB3 /* twitter.png */,
-				6C2C2A5617A3612400FD8CB3 /* copy.png */,
-				6CED0E5B17A362AE00C2B62E /* LBYouTubeView */,
-				6CA5B9F8176A48B100FEE6CD /* bg.png */,
 				6CA5B9CC176A44C800FEE6CD /* MainStoryboard_iPhone.storyboard */,
+				6C270A8C177F7C0300AFCFAE /* About.h */,
+				6C270A8D177F7C0300AFCFAE /* About.m */,
 				6CA5B9C3176A44C700FEE6CD /* AppDelegate.h */,
-				6CE0630617A831B100932F4F /* iRate.h */,
-				6CE0630717A831B100932F4F /* iRate.m */,
 				6CA5B9C4176A44C700FEE6CD /* AppDelegate.m */,
-				6CE0630317A8301900932F4F /* Reachability.h */,
-				6CE0630417A8301900932F4F /* Reachability.m */,
+				6CA5B9F8176A48B100FEE6CD /* bg.png */,
+				6C2C2A5617A3612400FD8CB3 /* copy.png */,
+				6CA5B9F5176A46CD00FEE6CD /* CurrentSong.h */,
+				6CA5B9F6176A46CD00FEE6CD /* CurrentSong.m */,
+				6C2C2A5317A3610700FD8CB3 /* fb.png */,
 				6C58BD4117B87623009EA90F /* GADAdMobExtras.h */,
 				6C58BD4217B87623009EA90F /* GADAdNetworkExtras.h */,
 				6C58BD4317B87623009EA90F /* GADAdSize.h */,
@@ -248,16 +245,19 @@
 				6C58BD4717B87623009EA90F /* GADInterstitialDelegate.h */,
 				6C58BD4817B87623009EA90F /* GADRequest.h */,
 				6C58BD4917B87623009EA90F /* GADRequestError.h */,
-				6C58BD4A17B87623009EA90F /* README.txt */,
+				6CE0630617A831B100932F4F /* iRate.h */,
+				6CE0630717A831B100932F4F /* iRate.m */,
+				6CED0E5B17A362AE00C2B62E /* LBYouTubeView */,
 				6C58BD4B17B87623009EA90F /* libGoogleAdMobAds.a */,
-				6C270A8C177F7C0300AFCFAE /* About.h */,
-				6C270A8D177F7C0300AFCFAE /* About.m */,
-				6C3E9BC2177402E8007BF2AA /* Segue.h */,
-				6C3E9BC3177402E8007BF2AA /* Segue.m */,
+				6CE0630317A8301900932F4F /* Reachability.h */,
+				6CE0630417A8301900932F4F /* Reachability.m */,
+				6C58BD4A17B87623009EA90F /* README.txt */,
 				6CA5B9FA176A4D2600FEE6CD /* Result.h */,
 				6CA5B9FB176A4D2600FEE6CD /* Result.m */,
-				6CA5B9F5176A46CD00FEE6CD /* CurrentSong.h */,
-				6CA5B9F6176A46CD00FEE6CD /* CurrentSong.m */,
+				6C3E9BC2177402E8007BF2AA /* Segue.h */,
+				6C3E9BC3177402E8007BF2AA /* Segue.m */,
+				6C2C2A5517A3612400FD8CB3 /* twitter.png */,
+				6CED0E5917A3628A00C2B62E /* twythm_smile.png */,
 				6CA5B9D2176A44C800FEE6CD /* ViewController.h */,
 				6CA5B9D3176A44C800FEE6CD /* ViewController.m */,
 				6CA5B9BB176A44C700FEE6CD /* Supporting Files */,
@@ -556,7 +556,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Twythm/Twythm-Prefix.pch";
 				INFOPLIST_FILE = "Twythm/Twythm-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Downloads/GoogleAdMobAdsSdkiOS-6.5.0\"",
@@ -576,7 +576,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Twythm/Twythm-Prefix.pch";
 				INFOPLIST_FILE = "Twythm/Twythm-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Downloads/GoogleAdMobAdsSdkiOS-6.5.0\"",

@@ -45,9 +45,17 @@
    [Text setText:title];
    [Artist setText:artist];
     
-
+    //Remove spaces from artist and title
+    NSString *title_replaced =[title stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    
+    NSString *title_formatted = [NSString stringWithFormat: @"%@", title_replaced];
+    
+    NSString *artist_replaced =[artist stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    
+    NSString *artist_formatted = [NSString stringWithFormat: @"%@", artist_replaced];
+    
     //Get Link
-    NSString *raw_link = [NSString stringWithFormat: @"http://twyt.co/generate.php?query=%@+%@", title, artist];
+    NSString *raw_link = [NSString stringWithFormat: @"http://twyt.co/generate.php?query=%@+%@", title_formatted, artist_formatted];
     NSLog(@"%@",raw_link);
     NSURL *link_url = [NSURL URLWithString:raw_link];
     NSError *error;
@@ -55,6 +63,10 @@
                                                     encoding:NSASCIIStringEncoding
                                                        error:&error];
     link_formatted = [NSString stringWithFormat: @"%@", link];
+    
+    
+    NSLog(@"%@",link_formatted);
+
     
     // Create a view of the standard size at the top of the screen.
     // Available AdSize constants are explained in GADAdSize.h.

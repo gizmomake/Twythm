@@ -15,4 +15,6 @@
 
 - (IBAction)SendInformation:(id)sender;
 
+- (IBAction)search:(id)sender;
+
 @end

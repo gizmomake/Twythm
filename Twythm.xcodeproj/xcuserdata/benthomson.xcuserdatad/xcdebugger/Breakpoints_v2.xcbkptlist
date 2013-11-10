@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Twythm/Result.m"
-            timestampString = "396040660.608686"
+            timestampString = "405815719.387886"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "@synthesize Text, Artist;"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "@synthesize Text, Artist, webView;"
             landmarkType = "19">
          </BreakpointContent>
       </BreakpointProxy>
@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Twythm/Result.m"
-            timestampString = "400463209.699684"
+            timestampString = "405815873.399234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>

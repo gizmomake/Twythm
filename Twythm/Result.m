@@ -7,6 +7,7 @@
 //
 
 #import "Result.h"
+#import "ViewController.h"
 #define AdMob_ID @"a151ead211d0faa"
 
 @interface Result ()
@@ -14,7 +15,7 @@
 @end
 
 @implementation Result
-@synthesize Text, Artist;
+@synthesize Text, Artist, webView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,14 +42,14 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *song = [defaults objectForKey:@"song"];
     if(song.length == 0) {
-        
+        ViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        [self.navigationController pushViewController:vc animated:YES];
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Uh oh!"
                                                           message:@"Please tap the search bar and type the song you want to share. "
                                                          delegate:nil
                                                 cancelButtonTitle:@"OK"
                                                 otherButtonTitles:nil];
         [message show];
-        [self performSegueWithIdentifier:@"SearchToMain" sender:self];
     }
     
     song = [song stringByReplacingOccurrencesOfString:@" " withString:@"+"];
@@ -132,10 +133,15 @@
                                               encoding:NSASCIIStringEncoding
                                                  error:&error];
     
-   raw_video = [NSString stringWithFormat: @"https://www.youtube.com/watch?v=%@", watchurl];
+   raw_video = [NSString stringWithFormat: @"https://www.youtube.com/v/%@", watchurl];
 
     NSLog(@"%@",raw_video);
 
+    
+    NSString *htmlString = [NSString stringWithFormat:@"<html><head><meta name = \"viewport\" content = \"initial-scale = 1.0, user-scalable = no, width = 200\"/></head><body style=\"background:#00;margin-top:0px;margin-left:0px\"><div><object width=\"200\" height=\"200\"><param name=\"movie\" value=\"http://www.youtube.com/v/%@&f=gdata_videos&c=ytapi-my-clientID&d=nGF83uyVrg8eD4rfEkk22mDOl3qUImVMV6ramM\"></param><param name=\"wmode\" value=\"transparent\"></param><embed src=\"http://www.youtube.com/v/%@&f=gdata_videos&c=ytapi-my-clientID&d=nGF83uyVrg8eD4rfEkk22mDOl3qUImVMV6ramM\"type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"200\" height=\"200\"></embed></object></div></body></html>", raw_video, raw_video];
+    
+    [webView loadHTMLString:htmlString baseURL:nil];
+    [self.view addSubview:webView];
    
         
 }
