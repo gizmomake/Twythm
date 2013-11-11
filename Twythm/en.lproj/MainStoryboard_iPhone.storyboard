@@ -60,6 +60,19 @@
                                     <action selector="search:" destination="2" eventType="touchUpInside" id="ceh-pz-JyQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxb-hO-s88">
+                                <rect key="frame" x="20" y="518" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7mx-Yo-KF2" kind="push" id="Nll-B7-r4G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.074509803920000006" green="0.6705882353" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -220,7 +233,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rj-mi-TZu">
-                                <rect key="frame" x="87" y="-2" width="61" height="85"/>
+                                <rect key="frame" x="20" y="0.0" width="61" height="85"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
                                 <state key="normal" title="←">
                                     <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -245,6 +258,21 @@
                                 </state>
                                 <connections>
                                     <action selector="openMail:" destination="7mx-Yo-KF2" eventType="touchUpInside" id="vja-eA-Rmp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NE-bp-G9K">
+                                <rect key="frame" x="135" y="11" width="177" height="64"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <size key="titleShadowOffset" width="0.20000000000000001" height="0.20000000000000001"/>
+                                <state key="normal" title="Send Feedback">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openMail:" destination="7mx-Yo-KF2" eventType="touchUpInside" id="yQy-tX-9zh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -392,6 +420,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Zj7-PU-gjD"/>
+        <segue reference="tsH-IR-Dlh"/>
     </inferredMetricsTieBreakers>
 </document>
