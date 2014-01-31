@@ -7,10 +7,6 @@
 //
 
 #import "CurrentSong.h"
-#import <MediaPlayer/MediaPlayer.h>
-#import <Social/Social.h>
-#import <Accounts/Accounts.h>
-#import <AVFoundation/AVFoundation.h>
 #define AdMob_ID @"a151ead211d0faa"
 @interface CurrentSong ()
 
@@ -89,16 +85,26 @@
 }
 
 - (IBAction)Link:(id)sender {
-    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    pasteboard.string = link_formatted;
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Link copied to clipboard!"
-                                                   message: nil
-                                                  delegate: self
-                                         cancelButtonTitle:@"Got It"
-                                         otherButtonTitles:nil];
+    SafariActivity *ActivityProvider = [[SafariActivity alloc] init];
+    //UIImage *ImageAtt = [UIImage imageNamed:@"safari.png"];
+    NSArray *Items = @[ActivityProvider];
     
     
-    [alert show];
+    UIActivityViewController *ActivityView = [[UIActivityViewController alloc]
+                                              initWithActivityItems:Items
+                                              applicationActivities:nil];
+    [ActivityView setExcludedActivityTypes:
+     @[UIActivityTypeAssignToContact,
+       UIActivityTypePrint,
+       UIActivityTypeSaveToCameraRoll,
+       UIActivityTypePostToWeibo]];
+    
+    [self presentViewController:ActivityView animated:YES completion:nil];
+    [ActivityView setCompletionHandler:^(NSString *act, BOOL done)
+     {
+         
+     }];
+
 }
 
 - (IBAction)Facebook:(id)sender {
@@ -106,7 +112,7 @@
     {
         mySLComposerSheet = [[SLComposeViewController alloc] init];
         mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook]; 
-        [mySLComposerSheet setInitialText:[NSString stringWithFormat:@"I'm listening to %@ by %@ on Twythm.com! %@ ",title, artist, link_formatted, mySLComposerSheet.serviceType]];
+        [mySLComposerSheet setInitialText:[NSString stringWithFormat:@"I'm listening to %@ by %@ on Twythm.com! %@",title, artist, link_formatted]];
         [self presentViewController:mySLComposerSheet animated:YES completion:nil];
     }
     }
@@ -117,7 +123,7 @@
         {
             SLComposeViewController *tweetSheet = [SLComposeViewController
                                                    composeViewControllerForServiceType:SLServiceTypeTwitter];
-            [tweetSheet setInitialText:[NSString stringWithFormat:@"I'm listening to %@ by %@ on Twythm.com! %@ ",title, artist, link_formatted]];
+            [tweetSheet setInitialText:[NSString stringWithFormat:@"I'm listening to %@ by %@ on Twythm.com! %@",title, artist, link_formatted]];
             [self presentViewController:tweetSheet animated:YES completion:nil];
         }
     }

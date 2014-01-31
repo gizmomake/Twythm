@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Twythm/Result.m"
-            timestampString = "405815719.387886"
+            timestampString = "411858015.275763"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "@synthesize Text, Artist, webView;"
             landmarkType = "19">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Twythm/CurrentSong.h"
-            timestampString = "396037733.53954"
+            timestampString = "411854936.979884"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "@interface CurrentSong"
             landmarkType = "2">
          </BreakpointContent>
@@ -58,43 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Twythm/CurrentSong.h"
-            timestampString = "396037733.53954"
+            timestampString = "411854936.979884"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "audioPlayer"
             landmarkType = "19">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[CurrentSong audioPlayer]"
-                  moduleName = "Twythm"
-                  urlString = "file://localhost/Users/benthomson/Desktop/Twythm%20app/TwythmNew/TwythmGit/Twythm/CurrentSong.h"
-                  timestampString = "401245242.405485"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[CurrentSong setAudioPlayer:]"
-                  moduleName = "Twythm"
-                  urlString = "file://localhost/Users/benthomson/Desktop/Twythm%20app/TwythmNew/TwythmGit/Twythm/CurrentSong.h"
-                  timestampString = "401245242.406397"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "31">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -136,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Twythm/Result.m"
-            timestampString = "405815873.399234"
+            timestampString = "411858015.275763"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>

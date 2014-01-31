@@ -8,9 +8,14 @@
 
 #import "Result.h"
 #import "ViewController.h"
+#import "SafariActivity.h"
+
 #define AdMob_ID @"a151ead211d0faa"
 
-@interface Result ()
+@interface Result () <UIPopoverControllerDelegate>
+{
+    UIPopoverController *_popover;
+}
 
 @end
 
@@ -147,55 +152,41 @@
 }
 
 -(IBAction)play:(id)sender {
-    LBYouTubeExtractor *extractor = [[LBYouTubeExtractor alloc] initWithURL:[NSURL URLWithString:raw_video] quality:LBYouTubeVideoQualityLarge];
-    
-    [extractor extractVideoURLWithCompletionBlock:^(NSURL *videoURL, NSError *error) {
-        if(!error) {
-            NSLog(@"Did extract video URL using completion block: %@", videoURL);
-        } else {
-            NSLog(@"Failed extracting video URL using block due to error:%@", error);
-        }
-        moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:videoURL];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MPMoviePlayerDidExitFullscreen:) name:MPMoviePlayerDidExitFullscreenNotification object:nil];
-        
-        [moviePlayerController.view setFrame:CGRectMake(0, 70, 320, 270)];
-        [self.view addSubview:moviePlayerController.view];
-        moviePlayerController.fullscreen = YES;
-        [moviePlayerController play];
-    }];
+
     
 
 
 }
 
--(void)videoPlayBackDidFinish:(NSNotification*)notification  {
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
-    
-    [moviePlayerController stop];
-    [moviePlayerController.view removeFromSuperview];
-    [self dismissMoviePlayerViewControllerAnimated];
-}
-- (void)MPMoviePlayerDidExitFullscreen:(NSNotification *)notification
+
+-(IBAction)showActivities:(id)sender
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:MPMoviePlayerDidExitFullscreenNotification
-                                                  object:nil];
     
-    [moviePlayerController stop];
-    [moviePlayerController.view removeFromSuperview];
-}
-- (IBAction)Link:(id)sender {
-    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    pasteboard.string = link_formatted;
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Link copied to clipboard!"
-                                                   message: nil
-                                                  delegate: self
-                                         cancelButtonTitle:@"Got It"
-                                         otherButtonTitles:nil];
+    SafariActivity *ActivityProvider = [[SafariActivity alloc] init];
+    //UIImage *ImageAtt = [UIImage imageNamed:@"safari.png"];
+    NSString *url = link_formatted;
+    NSArray *Items = @[ActivityProvider,url];
+
+    APActivityIcon *ca = [[APActivityIcon alloc] init];
+    NSArray *Acts = @[ca];
+
+   ActivityView = [[UIActivityViewController alloc]
+                                               initWithActivityItems:Items
+                                               applicationActivities:Acts];
+    [ActivityView setExcludedActivityTypes:
+     @[UIActivityTypeAssignToContact,
+       UIActivityTypePrint,
+       UIActivityTypeSaveToCameraRoll,
+       UIActivityTypePostToWeibo]];
     
-    
-    [alert show];
+    [self presentViewController:ActivityView animated:YES completion:nil];
+    [ActivityView setCompletionHandler:^(NSString *act, BOOL done)
+     {
+         if ( [act isEqualToString:@"com.ben.Safari"] )           [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+
+
+     }];
+
 }
 
 
@@ -205,21 +196,32 @@
     {
         mySLComposerSheet = [[SLComposeViewController alloc] init];
         mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        [mySLComposerSheet setInitialText:[NSString stringWithFormat:@"I'm listening to %@ by %@ on Twythm.com! %@ ",title_formatted, artist_formatted, link_formatted, mySLComposerSheet.serviceType]];
+        [mySLComposerSheet setInitialText:[NSString stringWithFormat:@"I'm listening to %@ by %@ on Twythm.com! %@",title_formatted, artist_formatted, link_formatted]];
         [self presentViewController:mySLComposerSheet animated:YES completion:nil];
+    } else {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Facebook accounts set up" message:@"Please add your Facebook account in settings." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
 }
 - (IBAction)Tweet:(id)sender {
 
     
-    
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
         SLComposeViewController *tweetSheet = [SLComposeViewController
                                                composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [tweetSheet setInitialText:[NSString stringWithFormat:@"I'm listening to %@ by %@ on Twythm.com! %@ ",title_formatted, artist_formatted, link_formatted]];
+        [tweetSheet setInitialText:[NSString stringWithFormat:@"I'm listening to %@ by %@ on Twythm.com! %@",title_formatted, artist_formatted, link_formatted]];
         [self presentViewController:tweetSheet animated:YES completion:nil];
+    } else {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Twitter accounts set up" message:@"Please add your Twitter account in settings." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
+}
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+    _popover = nil;
 }
 
 - (void)didReceiveMemoryWarning

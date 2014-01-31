@@ -11,8 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Accounts/Accounts.h>
 #import "GADBannerView.h"
-#import "LBYouTube.h"
-
+#import "SafariActivity.h"
 @interface Result : ViewController
 
 {
@@ -26,10 +25,13 @@
     IBOutlet UIButton *play;
     GADBannerView *bannerView_;
     SLComposeViewController *mySLComposerSheet;
-    MPMoviePlayerController *moviePlayerController;
     NSString *raw_video;
-
+    UIActivityViewController *ActivityView;
 }
+
+
+@property (nonatomic,retain) UIActivityViewController *ActivityView;
+
 @property (strong, nonatomic) IBOutlet UILabel *Text;
 @property (strong, nonatomic) IBOutlet UILabel *Artist;
 @property (nonatomic, retain) UIButton *Link;

@@ -10,6 +10,8 @@
 #import <Social/Social.h>
 #import <AVFoundation/AVFoundation.h>
 #import <Accounts/Accounts.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import "SafariActivity.h"
 #import "GADBannerView.h"
 
 @interface CurrentSong : ViewController
