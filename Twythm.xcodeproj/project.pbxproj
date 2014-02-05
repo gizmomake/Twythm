@@ -18,6 +18,7 @@
 		6C3E9BC6177403A4007BF2AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3E9BC5177403A4007BF2AA /* QuartzCore.framework */; };
 		6C3E9BC817740B64007BF2AA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3E9BC717740B64007BF2AA /* MediaPlayer.framework */; };
 		6C58BD4D17B87623009EA90F /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C58BD4B17B87623009EA90F /* libGoogleAdMobAds.a */; };
+		6C913753189B2B38000D5CEA /* XCDYouTubeVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C913752189B2B38000D5CEA /* XCDYouTubeVideoPlayerViewController.m */; };
 		6C9A2671177FE4A40020BAE4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9A2670177FE4A40020BAE4 /* AVFoundation.framework */; };
 		6CA5B9B5176A44C700FEE6CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA5B9B4176A44C700FEE6CD /* UIKit.framework */; };
 		6CA5B9B7176A44C700FEE6CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA5B9B6176A44C700FEE6CD /* Foundation.framework */; };
@@ -89,6 +90,8 @@
 		6C58BD4817B87623009EA90F /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
 		6C58BD4917B87623009EA90F /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
 		6C58BD4B17B87623009EA90F /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		6C913751189B2B38000D5CEA /* XCDYouTubeVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDYouTubeVideoPlayerViewController.h; sourceTree = "<group>"; };
+		6C913752189B2B38000D5CEA /* XCDYouTubeVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCDYouTubeVideoPlayerViewController.m; sourceTree = "<group>"; };
 		6C9A2670177FE4A40020BAE4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6CA5B9B1176A44C700FEE6CD /* Twythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA5B9B4176A44C700FEE6CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -173,6 +176,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C913750189B29AE000D5CEA /* Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				6C913751189B2B38000D5CEA /* XCDYouTubeVideoPlayerViewController.h */,
+				6C913752189B2B38000D5CEA /* XCDYouTubeVideoPlayerViewController.m */,
+			);
+			name = Youtube;
+			sourceTree = "<group>";
+		};
 		6CA5B9A8176A44C700FEE6CD = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +228,7 @@
 		6CA5B9BA176A44C700FEE6CD /* Twythm */ = {
 			isa = PBXGroup;
 			children = (
+				6C913750189B29AE000D5CEA /* Youtube */,
 				6CB12C0418825B4800EDB1E0 /* Activities */,
 				6CE3C1AC18824E2C00EA8E8A /* AdMob */,
 				6CE3C1AF18824EA900EA8E8A /* Images */,
@@ -463,6 +476,7 @@
 				6CA5B9C5176A44C700FEE6CD /* AppDelegate.m in Sources */,
 				6CA5B9D4176A44C800FEE6CD /* ViewController.m in Sources */,
 				6CA5B9F7176A46CD00FEE6CD /* CurrentSong.m in Sources */,
+				6C913753189B2B38000D5CEA /* XCDYouTubeVideoPlayerViewController.m in Sources */,
 				6CA5B9FC176A4D2600FEE6CD /* Result.m in Sources */,
 				6C3E9BC4177402E8007BF2AA /* Segue.m in Sources */,
 				6C270A8E177F7C0300AFCFAE /* About.m in Sources */,

@@ -149,6 +149,16 @@
                                     <action selector="showActivities:" destination="g84-aX-v5Q" eventType="touchUpInside" id="IsD-dy-Zmx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lvq-a8-I0Y">
+                                <rect key="frame" x="145" y="458" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="g84-aX-v5Q" eventType="touchUpInside" id="JWc-A4-vOR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.074509803920000006" green="0.6705882353" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -302,6 +312,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Zj7-PU-gjD"/>
+        <segue reference="d73-Wa-G3x"/>
     </inferredMetricsTieBreakers>
 </document>

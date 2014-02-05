@@ -9,6 +9,7 @@
 #import "Result.h"
 #import "ViewController.h"
 #import "SafariActivity.h"
+#import "XCDYouTubeVideoPlayerViewController.h"
 
 #define AdMob_ID @"a151ead211d0faa"
 
@@ -127,33 +128,13 @@
     [Text setText:title_formatted];
     
     
-    
-    
-    NSString *raw_watchurl_raw = [NSString stringWithFormat: @"http://twythm.com/youtubegetter.php?query=%@+%@", title_formatted, artist_formatted];
-    NSString *raw_watchurl = [raw_watchurl_raw stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-    NSLog(@"%@",raw_watchurl);
-
-    NSURL *watch_url = [NSURL URLWithString:raw_watchurl];
-    NSString *watchurl = [NSString stringWithContentsOfURL:watch_url
-                                              encoding:NSASCIIStringEncoding
-                                                 error:&error];
-    
-   raw_video = [NSString stringWithFormat: @"https://www.youtube.com/v/%@", watchurl];
-
-    NSLog(@"%@",raw_video);
-
-    
-    NSString *htmlString = [NSString stringWithFormat:@"<html><head><meta name = \"viewport\" content = \"initial-scale = 1.0, user-scalable = no, width = 200\"/></head><body style=\"background:#00;margin-top:0px;margin-left:0px\"><div><object width=\"200\" height=\"200\"><param name=\"movie\" value=\"http://www.youtube.com/v/%@&f=gdata_videos&c=ytapi-my-clientID&d=nGF83uyVrg8eD4rfEkk22mDOl3qUImVMV6ramM\"></param><param name=\"wmode\" value=\"transparent\"></param><embed src=\"http://www.youtube.com/v/%@&f=gdata_videos&c=ytapi-my-clientID&d=nGF83uyVrg8eD4rfEkk22mDOl3qUImVMV6ramM\"type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"200\" height=\"200\"></embed></object></div></body></html>", raw_video, raw_video];
-    
-    [webView loadHTMLString:htmlString baseURL:nil];
-    [self.view addSubview:webView];
-   
-        
 }
 
 -(IBAction)play:(id)sender {
 
-    
+    XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:@"YGf-RQXhhBw"];
+	[self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
+
 
 
 }
