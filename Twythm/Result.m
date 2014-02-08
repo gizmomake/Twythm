@@ -46,7 +46,7 @@
     [super viewDidLoad];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *song = [defaults objectForKey:@"song"];
+    song = [defaults objectForKey:@"song"];
     if(song.length == 0) {
         ViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
         [self.navigationController pushViewController:vc animated:YES];
@@ -131,8 +131,23 @@
 }
 
 -(IBAction)play:(id)sender {
+    
+    NSError *error;
+    
+    NSString *title_replaced =[title_formatted stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    NSString *artist_replaced =[artist_formatted stringByReplacingOccurrencesOfString:@" " withString:@"+"];
 
-    XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:@"YGf-RQXhhBw"];
+    
+    
+    NSString *raw_youtubeid = [NSString stringWithFormat: @"http://twythm.com/iphone/youtubeid.php?query=%@+%@", title_replaced, artist_replaced];
+    NSURL *youtubeid_url = [NSURL URLWithString:raw_youtubeid];
+    NSString *youtubeid = [NSString stringWithContentsOfURL:youtubeid_url
+                                                encoding:NSUTF8StringEncoding
+                                                   error:&error];
+    NSLog(@"%@",youtubeid);
+
+
+    XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:youtubeid];
 	[self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
 
 
@@ -144,7 +159,6 @@
 {
     
     SafariActivity *ActivityProvider = [[SafariActivity alloc] init];
-    //UIImage *ImageAtt = [UIImage imageNamed:@"safari.png"];
     NSString *url = link_formatted;
     NSArray *Items = @[ActivityProvider,url];
 
@@ -192,7 +206,7 @@
     {
         SLComposeViewController *tweetSheet = [SLComposeViewController
                                                composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [tweetSheet setInitialText:[NSString stringWithFormat:@"I'm listening to %@ by %@ on Twythm.com! %@",title_formatted, artist_formatted, link_formatted]];
+        [tweetSheet setInitialText:[NSString stringWithFormat:@"I'm listening to %@ by %@ on @Twythm %@",title_formatted, artist_formatted, link_formatted]];
         [self presentViewController:tweetSheet animated:YES completion:nil];
     } else {
         

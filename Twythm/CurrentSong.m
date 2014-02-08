@@ -123,7 +123,7 @@
         {
             SLComposeViewController *tweetSheet = [SLComposeViewController
                                                    composeViewControllerForServiceType:SLServiceTypeTwitter];
-            [tweetSheet setInitialText:[NSString stringWithFormat:@"I'm listening to %@ by %@ on Twythm.com! %@",title, artist, link_formatted]];
+            [tweetSheet setInitialText:[NSString stringWithFormat:@"I'm listening to %@ by %@ on @Twythm %@",title, artist, link_formatted]];
             [self presentViewController:tweetSheet animated:YES completion:nil];
         }
     }

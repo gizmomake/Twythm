@@ -27,6 +27,8 @@
     SLComposeViewController *mySLComposerSheet;
     NSString *raw_video;
     UIActivityViewController *ActivityView;
+    NSString *song;
+    
 }
 
 
@@ -34,11 +36,12 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *Text;
 @property (strong, nonatomic) IBOutlet UILabel *Artist;
-@property (nonatomic, retain) UIButton *Link;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 
-
+@property (nonatomic, retain) UIButton *Link;
 @property (nonatomic,strong) id infoRequest;
+@property (nonatomic, retain) NSString *song;
+
 - (IBAction)home;
 - (IBAction)play:(id)sender;
 
