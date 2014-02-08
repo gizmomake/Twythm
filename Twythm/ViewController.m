@@ -17,8 +17,14 @@
 
 @implementation ViewController
 @synthesize CaptureInformation;
+
+
+
+
 - (void)viewDidLoad
 {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+
     [iRate sharedInstance].previewMode = NO;
     [iRate sharedInstance].appStoreID = 518215205;
 
@@ -37,7 +43,6 @@
     }
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
     self.CaptureInformation.delegate = self;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -87,9 +92,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 - (void)viewDidUnload {
-    [super viewDidUnload];
+    
+
 }
+
+
 @end

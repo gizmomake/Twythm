@@ -41,9 +41,16 @@
 [textField resignFirstResponder];
 }
 
+
+
 - (void)viewDidLoad
 {
+    
+    
     [super viewDidLoad];
+
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     song = [defaults objectForKey:@"song"];
@@ -224,5 +231,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void) viewDidUnload:(BOOL)animated {
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 
+}
 @end
